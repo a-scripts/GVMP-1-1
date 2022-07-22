@@ -11,8 +11,8 @@ namespace VMP_CNR.Handler
 {
     public class DiscordHandler
     {
-        private static string m_LiveWebhookURL = "https://canary.discord.com/api/webhooks/973676619019464795/FSzxS2xb8RYdM5YFnDk1naN7w1rUPIuzaA6vB8alfu2D8p49C1I57xoBPHwroDJSSw74";
-        private static string m_TestWebhookURL = "https://canary.discord.com/api/webhooks/973676619019464795/FSzxS2xb8RYdM5YFnDk1naN7w1rUPIuzaA6vB8alfu2D8p49C1I57xoBPHwroDJSSw74";
+        private static string m_LiveWebhookURL = "https://discord.com/api/webhooks/1000058480402641007/DFX-rZJcBCAqY_53O7S_TO8kR6DjhMqGeXPloRnI_vWzop8e4kbVg-7BU0NKw6n508KW";
+        private static string m_TestWebhookURL = "https://discord.com/api/webhooks/1000058480402641007/DFX-rZJcBCAqY_53O7S_TO8kR6DjhMqGeXPloRnI_vWzop8e4kbVg-7BU0NKw6n508KW";
 
         public DiscordHandler()
         {
