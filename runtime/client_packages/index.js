@@ -1,0 +1,1 @@
+require('gvmp/client.js');

@@ -1,0 +1,10 @@
+{
+	"maxplayers" : 5000,
+	"name" : "German V Roleplay by GVMP.de", 
+	"gamemode" : "GVMP", 
+	"stream-distance" : 500.0,
+	"announce" : false,
+	"csharp" : "true",
+	"port": 22005,
+	"api-threading-debugging": false
+}
