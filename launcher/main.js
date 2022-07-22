@@ -3,7 +3,7 @@ const path = require('path')
 
 if (require('electron-squirrel-startup')) return;
 
-const m_URL = 'http://storage.gvmp.de/upload/launcher_update'
+const m_URL = 'localhost'
 autoUpdater.setFeedURL(m_URL)
 
 function createWindow () {
