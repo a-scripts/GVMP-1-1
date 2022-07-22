@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<ApplicationIcon />
+		<StartupObject />
+		<Copyright>(c) by www.gvmp.de (Daniel Albert)</Copyright>
+		<PackageProjectUrl>ww.gvmp.de</PackageProjectUrl>
+		<PackageLicenseUrl>ww.gvmp.de</PackageLicenseUrl>
+		<Company>GVMP</Company>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<LangVersion>7.2</LangVersion>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile></DocumentationFile>
+		<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>C:\Users\angel\Desktop\Server\Server\dotnet\resources\VMP_CNR</OutputPath>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Module\Black Money\**" />
+		<Compile Remove="Module\NSA\WeaponBulletModule\**" />
+		<EmbeddedResource Remove="Module\Black Money\**" />
+		<EmbeddedResource Remove="Module\NSA\WeaponBulletModule\**" />
+		<None Remove="Module\Black Money\**" />
+		<None Remove="Module\NSA\WeaponBulletModule\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MessagePack" Version="1.7.3.4" />
+		<PackageReference Include="MySql.Data" Version="8.0.13" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="RAGEMP-Bootstrapper" Version="1.1.3" />
+		<PackageReference Include="System.Security.Permissions" Version="6.0.0" />
+		<PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
+		<PackageReference Include="TeamSpeak3QueryApi" Version="1.8.0" />
+		<PackageReference Update="Microsoft.NETCore.App" Version="2.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+		<PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+		<PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="MySql.Data">
+			<HintPath>Dependencies\MySql.Data.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>
