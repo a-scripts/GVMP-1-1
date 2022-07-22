@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>GVMP-Launcher - Einstellungen</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../assets/css/Settings/settings.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="../../assets/js/Alerts/alerts.js"></script>
+        <script src="../../assets/js/Settings/settings.js"></script>
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://launcher.gvmp.de:5004 https://launcher.gvmp.de:5006 https://maxcdn.bootstrapcdn.com https://code.jquery.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                <img class="settings-logo" src="../../assets/img/logo.png" alt="GVMP Launcher Einstellungen">
+            </div>
+            <div class="alert mb-3 invisible" role="alert" id="errorMessage">
+            </div>
+            <form id="settingsForm">
+                <div class="form-group">
+                    <label for="username">(IC) Benutzername:</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="rage_path">RAGE:MP Pfad:</label>
+                    <input type="text" class="form-control" id="rage_path" name="rage_path">
+                </div>
+                <div class="custom-control custom-switch mb-1" data-toggle="tooltip" title="Nur deaktivieren, wenn du Probleme mit dem Starten von RAGE:MP hast">
+                    <input type="checkbox" class="custom-control-input" id="rage_autoconnect" data-toggle="tooltip">
+                    <label class="custom-control-label" for="rage_autoconnect">Automatisches verbinden (RAGE:MP) deaktivieren</label>
+                </div>
+                <div class="custom-control custom-switch mb-1" data-toggle="tooltip" title="Aktiviert das helle Design vom GVMP-Launcher">
+                    <input type="checkbox" class="custom-control-input" id="white_design" data-toggle="tooltip">
+                    <label class="custom-control-label" for="white_design">(WIP) Helles Design verwenden</label>
+                </div>
+                <div class="custom-control custom-switch mb-1" data-toggle="tooltip" title="Benutzt einen anderen Proxy-Server für die Verbindung zum Gameserver">
+                    <input type="checkbox" class="custom-control-input" id="use_experimental_server" data-toggle="tooltip">
+                    <label class="custom-control-label" for="use_experimental_server">Experimentellen Ingame-Server nutzen</label>
+                </div>
+                <button type="submit" class="btn btn-success" id="saveBtn">Speichern</button>
+                <button class="btn btn-warning" id="ragePathBtn">RAGE:MP Verzeichnis auswählen</button>
+                <button class="btn btn-danger" id="exitBtn">Schließen</button>
+            </form>
+            <br>
+            <small id="revision">Launcher Rev: </small>
+        </div>
+    </body>
+</html>

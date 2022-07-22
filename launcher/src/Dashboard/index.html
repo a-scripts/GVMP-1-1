@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>GVMP-Launcher</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/Dashboard/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/dashboard/Navigation-Clean.css">
+    <link rel="stylesheet" href="../assets/css/dashboard/style.css">
+
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/Alerts/alerts.js"></script>
+    <script src="../assets/js/dashboard/dashboard.js"></script>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.rage.mp https://launcher.gvmp.de:5004 https://launcher.gvmp.de:5006 https://maxcdn.bootstrapcdn.com https://code.jquery.com https://cdnjs.cloudflare.com https://www.youtube.com https://i.ytimg.com">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean foreground">
+        <div class="container">
+            <img src="../assets/img/logo.png" alt="GVMP Launcher" class="logo no-drag">
+            <button data-bs-toggle="collapse" class="navbar-toggler no-drag" data-bs-target="#navcol-1">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse no-drag" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" id="forum">Forum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="magazin">Magazin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="whitelist">Whitelist</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="support">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="regelwerk">Regelwerke</a></li>
+                    <li class="nav-item dropdown no-drag"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Einstellungen </a>
+                        <div class="dropdown-menu no-drag">
+                            <a class="dropdown-item bg-success" id="voice-plugin" href="#">Voice Plugin</a>
+                            <a class="dropdown-item" href="#" id="charOverview">Charakterübersicht</a>
+                            <a class="dropdown-item" id="settings" href="#">Launcher Einstellungen</a>
+                            <a class="dropdown-item" id="logout" href="#">Ausloggen</a>
+                            <a class="dropdown-item" id="exit" href="#">Beenden</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid no-drag">
+        <div class="alert p-2 mt-3 mb-3 invisible" id="maintenanceMessage"></div>
+
+        <!-- Erste Reihe: Trailer + News -->
+        <div class="row justify-content-around">
+            <div class="col-sm">
+                <h3>Fraktionstrailer</h3>
+                <iframe width="744"
+                        height="396"
+                        title="GVMP Fraktionstrailer"
+                        id="launcherVideo"
+                        frameborder="0"
+                        allow="accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture">
+                </iframe>
+            </div>
+            <div class="col-sm">
+                <h3>Neueste Ankündigungen</h3>
+                <div class="row justify-content-around">
+                    <div class="col-sm">
+                        <div class="card bg-transparent add-blur box-news">
+                            <div class="d-flex justify-content-center align-items-center card-img-top card-top box-news-top">
+                                <img class="news-logo" src="../assets/img/logo.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title news-title" id="news_1_title"></h5>
+
+                                <!-- Text bei 73 Charakter cutten -->
+                                <p class="card-text" id="news_1_description"></p>
+                                <a href="#" id="news_1_link" class="btn btn-warning">Lesen...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card bg-transparent add-blur box-news">
+                            <div class="d-flex justify-content-center align-items-center card-img-top card-top box-news-top">
+                                <img class="news-logo" src="../assets/img/logo.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title news-title" id="news_2_title"></h5>
+
+                                <!-- Text bei 73 Charakter cutten -->
+                                <p class="card-text" id="news_2_description"></p>
+                                <a href="#" id="news_2_link" class="btn btn-warning">Lesen...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zweite Reihe: Play Button + Stats -->
+        <div class="row mt-3 mb-1">
+            <div class="col-3 add-blur">
+                <button class="btn btn-lg btn-outline-danger w-100 h-100 disabled" id="PlayBtn">Spielen</button>
+            </div>
+            <div class="col-3 add-blur">
+                <p class="mt-3 mb-0" id="server_ip"></p>
+                <p class="mb-3 mt-0" id="online_players">Server Status: </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

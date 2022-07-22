@@ -1,0 +1,23 @@
+body {
+    background-color: #171717;
+    color: white;
+    overflow-y: hidden;
+}
+
+#loginMessage {
+    font-size: smaller;
+    color: black !important;
+}
+
+.invisible {
+    visibility: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.login-logo {
+    width: 125px;
+    height: 125px;
+    padding: 20px
+}

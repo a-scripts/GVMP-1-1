@@ -1,0 +1,10 @@
+body {
+    background-color: #171717;
+    color: white;
+}
+
+.login-logo {
+    width: 125px;
+    height: 125px;
+    padding: 20px
+}

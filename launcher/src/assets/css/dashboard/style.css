@@ -1,0 +1,61 @@
+body {
+    background-image: url("../../img/Dashboard/background.jpg");
+    color: white;
+    -webkit-app-region: drag
+}
+
+#maintenanceMessage {
+    font-size: smaller;
+    color: black !important;
+}
+
+.invisible {
+    visibility: hidden;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.add-blur {
+    backdrop-filter: blur(8px);
+}
+
+.add-blur-heavy {
+    backdrop-filter: blur(15px);
+}
+
+.foreground {
+    z-index: 1039 !important;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.card-top {
+    width: 286px;
+    height: 180px;
+}
+
+.news-logo {
+    height: 125px;
+    width: 125px;
+}
+
+.box-news {
+    height: 396px;
+    width: 18rem;
+}
+
+.box-news-top {
+    height: 156px;
+}
+
+.news-title {
+    height: 72px;
+}
+
+.no-drag {
+    -webkit-app-region: no-drag;
+}
